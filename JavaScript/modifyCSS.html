@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            color: red;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 50px;
+            cursor: pointer;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" onmouseenter="modify()" onmouseleave="unmodify()">
+        Hello Manish
+    </div>
+</body>
+<script>
+    function modify(){
+        document.getElementById('main').style.fontSize = "100px";
+        document.getElementById('main').style.color = "blue";
+        document.getElementById('main').style.fontFamily = "verdana";
+
+
+        
+    }
+    function unmodify(){
+        document.getElementById('main').style.fontSize = "50px";
+        document.getElementById('main').style.color = "red";
+        document.getElementById('main').style.fontFamily = "";
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="name" id="name" style="width: 40%; margin: 50px;">
+    <button onclick="Greet()">
+        click
+    </button>
+
+    <h1>
+        <div class="greet">
+
+        </div>
+    </h1>
+</body>
+
+<script type="text/JavaScript">
+    
+    function Greet() {
+        var name = document.getElementById('name').value;
+        var geetx = "Hello "+name;
+        // alert(name);
+        document.getElementsByClassName('greet')[0].innerHTML = geetx;
+    }
+</script>
+</html>

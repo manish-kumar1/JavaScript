@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" name="" id="first" step="any">
+    <select name="" id="oper">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">X</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" name="" id="second" step="any">
+    <br>
+    <br>
+    <button onclick="calFun()">Calcuted</button>
+    <input type="" name="result" id="result" readonly="">
+</body>
+<script type="text/JavaScript">
+
+    function calFun() {
+        var num1 = document.getElementById('first').value;
+        var num2 = document.getElementById('second').value;
+        var opert = document.getElementById('oper').value;
+        
+        if(opert == '+'){
+            var result = parseInt(num1) + parseInt(num2);
+        }
+        if(opert == '-'){
+            var result = parseInt(num1) - parseInt(num2);
+        }
+        if(opert == '*'){
+            var result = parseInt(num1) * parseInt(num2);
+        }
+        if(opert == '/'){
+            var result = parseInt(num1) / parseInt(num2);
+        }
+        if(opert == '%'){
+            var result = parseInt(num1) % parseInt(num2);
+        }
+        document.getElementById('result').value = result;
+    }
+</script>
+</html>

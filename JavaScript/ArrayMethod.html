@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="main"></h1>
+    <button onclick="pop()">POP</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="slice()">slice</button>
+    <button onclick="revers()">reverse</button>
+    <button onclick="shift()">Shift</button>
+</body>
+
+<script>
+    var num = [34,564,256,223,26,36];
+    var fruits= ["Mango", "Apple", "Banana", "Orange", "Grapes"];
+    // document.write(Array.isArray(fruits));
+    // document.write(fruits.valueOf());
+    // document.write(fruits.join(" & "));
+    // var veg = ["Potato","ladyfinger","Onione", "tomato"];
+
+    // var shop = veg.concat(fruits);
+    // document.write(shop+"  ");
+    // document.write(shop.join(" | "));
+    // document.write(shop.indexOf("Banana"));
+
+    var demo = fruits;
+    document.getElementById('main').innerText = demo;
+    function pop(){
+        demo.pop();
+        document.getElementById('main').innerText = demo;
+    }
+    function push(){
+        var name = prompt("Enter a fruit name..","");
+        demo.push(name);
+        document.getElementById('main').innerText = demo;
+    }
+    function slice(){
+        var x = demo.slice(1, 2);
+        document.getElementById('main').innerText = x;
+    }
+    function revers(){
+        demo.reverse();
+        document.getElementById('main').innerText = demo;
+    }
+    function shift(){
+        demo.shift();
+        document.getElementById('main').innerText = demo;
+
+    }
+
+    
+</script>
+</html>
